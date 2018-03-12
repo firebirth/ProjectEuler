@@ -7,7 +7,9 @@ namespace ProjectEuler.Tasks
     {
         public static long GetLargestPrimeFactor(long number)
         {
-            return PrimeHelpers.GetPrimeFactors(number).Max();
+            var primeFactors = PrimeHelpers.GetPrimeFactors(number);
+
+            return primeFactors.Max();
         }
     }
 }

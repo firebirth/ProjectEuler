@@ -12,6 +12,7 @@ namespace ProjectEuler.Utils.Tests
         [InlineData(90, new long[] {2, 3, 3, 5})]
         [InlineData(6125, new long[] {7, 7, 5, 5, 5})]
         [InlineData(271, new long[] {271})]
+        [InlineData(600851475143, new long[] {71, 839, 1471, 6857})]
         public void GetPrimeFactors_should_generate_divisors(long number, long[] expectedDivisors)
         {
             var actualDivisors = PrimeHelpers.GetPrimeFactors(number);

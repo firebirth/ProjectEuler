@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ProjectEuler.Utils.Tests\ProjectEuler.Utils.Tests.csproj" />
     <ProjectReference Include="..\ProjectEuler.Utils\ProjectEuler.Utils.csproj" />
   </ItemGroup>
 

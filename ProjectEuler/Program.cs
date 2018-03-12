@@ -7,7 +7,7 @@ namespace ProjectEuler
     {
         public static void Main(string[] args)
         {
-            Console.Out.WriteLine(Problem3.GetLargestPrimeFactor(600851475143));
+            Console.Out.WriteLine(Problem4.GetLargestPalindrome(3));
         }
     }
 }
