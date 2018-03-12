@@ -7,7 +7,7 @@ namespace ProjectEuler
     {
         public static void Main(string[] args)
         {
-            Console.Out.WriteLine(Problem1.GetSumBelow1000());
+            Console.Out.WriteLine(Problem3.GetLargestPrimeFactor(600851475143));
         }
     }
 }
