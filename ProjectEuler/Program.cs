@@ -7,7 +7,7 @@ namespace ProjectEuler
     {
         public static void Main(string[] args)
         {
-            Console.Out.WriteLine(Problem6.SumSquareDifference(1000));
+            Console.Out.WriteLine(Problem7.GetPrimeNumber(10001));
         }
     }
 }
