@@ -7,7 +7,7 @@ namespace ProjectEuler
     {
         public static void Main(string[] args)
         {
-            Console.Out.WriteLine(Problem4.GetLargestPalindrome(3));
+            Console.Out.WriteLine(Problem5.GetSmallestEvenlyDivisibleByAllUpTo(20));
         }
     }
 }
