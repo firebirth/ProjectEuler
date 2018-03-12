@@ -7,7 +7,7 @@ namespace ProjectEuler
     {
         public static void Main(string[] args)
         {
-            Console.Out.WriteLine(Problem5.GetSmallestEvenlyDivisibleByAllUpTo(20));
+            Console.Out.WriteLine(Problem6.SumSquareDifference(1000));
         }
     }
 }
