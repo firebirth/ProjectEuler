@@ -7,7 +7,8 @@ namespace ProjectEuler
     {
         public static void Main(string[] args)
         {
-            Console.Out.WriteLine(Problem8.GetLargestAdjacentProduct(13));
+            var (a, b, c) = Problem9.GetPythagoreanTripletWhichSumsTo(1000);
+            Console.Out.WriteLine(a * b * c);
         }
     }
 }

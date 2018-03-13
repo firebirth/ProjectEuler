@@ -1,6 +1,4 @@
-﻿using System.Linq;
-
-namespace ProjectEuler.Tasks
+﻿namespace ProjectEuler.Tasks
 {
     public static class Problem6
     {

@@ -5,22 +5,6 @@ namespace ProjectEuler.Utils
 {
     public static class PrimeHelpers
     {
-        public static long Gcd(long x, long y)
-        {
-            if (x == 0)
-            {
-                return y;
-            }
-
-            if (y == 0)
-            {
-                return x;
-            }
-
-            x = x % y;
-            return Gcd(y, x);
-        }
-
         public static bool IsPrime(long n)
         {
             if (n == 1)
