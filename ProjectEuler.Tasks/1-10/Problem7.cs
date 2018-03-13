@@ -14,7 +14,7 @@ namespace ProjectEuler.Tasks
                     count++;
                 }
 
-                if (count == index)
+                if (count >= index)
                 {
                     return i;
                 }
