@@ -7,8 +7,7 @@ namespace ProjectEuler
     {
         public static void Main(string[] args)
         {
-            var (a, b, c) = Problem9.GetPythagoreanTripletWhichSumsTo(1000);
-            Console.Out.WriteLine(a * b * c);
+            Console.Out.WriteLine(Problem10.GetSumOfPrimesBelow(2_000_000));
         }
     }
 }
