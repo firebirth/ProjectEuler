@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ProjectEuler.Utils
 {
@@ -66,6 +67,36 @@ namespace ProjectEuler.Utils
                 number /= divisor;
             }
         }
+
+        public static bool[] EratosthenesSieve(int limit)
+        {
+            var sieve = new bool[limit];
+            sieve[0] = sieve[1] = true; // 0 and 1 are not primes
+            var crossLimit = (int)Math.Floor(Math.Sqrt(limit));
+            for (int i = 4; i < limit; i+=2)
+            {
+                sieve[i] = true;
+            }
+
+            for (int i = 3; i <= crossLimit; i+=2)
+            {
+                if (!sieve[i])
+                {
+                    for (int j = i*i; j < limit; j+=2*i)
+                    {
+                        sieve[j] = true;
+                    }
+                }
+            }
+
+            return sieve;
+        }
+
+        public static int[] GetPrimesUpTo(int limit) => EratosthenesSieve(limit)
+                                                        .Select((b, i) => (IsPrime: !b, Number: i))
+                                                        .Where(tuple => tuple.IsPrime)
+                                                        .Select(tuple => tuple.Number)
+                                                        .ToArray();
 
         private static long GetSmallestDivisor(long number)
         {
