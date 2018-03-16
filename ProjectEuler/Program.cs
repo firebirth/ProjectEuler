@@ -7,7 +7,7 @@ namespace ProjectEuler
     {
         public static void Main(string[] args)
         {
-            Console.Out.WriteLine(Problem12.GetTriangleNumberWithDivisors(500));
+            Console.Out.WriteLine(Problem13.GetFirstDigits(10));
             Console.ReadLine();
         }
     }
