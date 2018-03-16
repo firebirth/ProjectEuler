@@ -7,7 +7,8 @@ namespace ProjectEuler
     {
         public static void Main(string[] args)
         {
-            Console.Out.WriteLine(Problem10.GetSumOfPrimesBelow(2_000_000));
+            Console.Out.WriteLine(Problem12.GetTriangleNumberWithDivisors(500));
+            Console.ReadLine();
         }
     }
 }
