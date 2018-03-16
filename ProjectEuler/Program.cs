@@ -7,7 +7,7 @@ namespace ProjectEuler
     {
         public static void Main(string[] args)
         {
-            Console.Out.WriteLine(Problem13.GetFirstDigits(10));
+            Console.Out.WriteLine(Problem14.LongestCollatzSequenceLengthStartingFromUnder(1000000));
             Console.ReadLine();
         }
     }
