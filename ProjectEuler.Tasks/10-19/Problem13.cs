@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Numerics;
 
 namespace ProjectEuler.Tasks
@@ -113,7 +112,7 @@ namespace ProjectEuler.Tasks
         public static string GetFirstDigits(int n)
         {
             var sum = Input.Select(BigInteger.Parse)
-                .Aggregate(BigInteger.Zero, (current, next) => current + next);
+                           .Aggregate(BigInteger.Zero, (current, next) => current + next);
             return sum.ToString().Substring(0, n);
         }
     }
