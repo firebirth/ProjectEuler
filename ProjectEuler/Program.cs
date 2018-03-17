@@ -7,7 +7,8 @@ namespace ProjectEuler
     {
         public static void Main(string[] args)
         {
-            Console.Out.WriteLine(Problem10.GetSumOfPrimesBelow(2_000_000));
+            Console.Out.WriteLine(Problem14.LongestCollatzSequenceLengthStartingFromUnder(1000000));
+            Console.ReadLine();
         }
     }
 }
