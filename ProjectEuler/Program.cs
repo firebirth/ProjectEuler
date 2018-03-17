@@ -7,7 +7,7 @@ namespace ProjectEuler
     {
         public static void Main(string[] args)
         {
-            Console.Out.WriteLine(Problem17.GetLetterCount(1000));
+            Console.Out.WriteLine(Problem21.SumOfAmicableUnder(10000));
             Console.ReadLine();
         }
     }

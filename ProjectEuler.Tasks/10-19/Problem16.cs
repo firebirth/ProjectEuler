@@ -1,5 +1,5 @@
-﻿using System.Linq;
-using System.Numerics;
+﻿using System.Numerics;
+using ProjectEuler.Utils;
 
 namespace ProjectEuler.Tasks
 {
@@ -11,10 +11,7 @@ namespace ProjectEuler.Tasks
             // thus, since n = 2*k + p, (2^n % 9) = (2^p % 9)
             var pow = BigInteger.Pow(2, n);
 
-            return pow.ToString()
-                      .Select(s => s.ToString())
-                      .Select(long.Parse)
-                      .Sum();
+            return NumberHelpers.GetSumOfDigits(pow.ToString());
         }
     }
 }

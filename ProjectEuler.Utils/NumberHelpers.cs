@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace ProjectEuler.Utils
 {
@@ -74,6 +76,24 @@ namespace ProjectEuler.Utils
             }
 
             return "one thousand";
+        }
+
+        public static long GetSumOfDigits(string number)
+        {
+            return number.Select(s => s.ToString())
+                         .Select(long.Parse)
+                         .Sum();
+        }
+
+        public static IEnumerable<long> GetAllFactors(long number)
+        {
+            for (int i = 1; i < number / 2 + 1; i++)
+            {
+                if (number % i == 0)
+                {
+                    yield return i;
+                }
+            }
         }
     }
 }
