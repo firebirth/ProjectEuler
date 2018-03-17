@@ -7,7 +7,7 @@ namespace ProjectEuler
     {
         public static void Main(string[] args)
         {
-            Console.Out.WriteLine(Problem15.GetPathCountForGrid(20));
+            Console.Out.WriteLine(Problem16.GetSumOfDigistOfTwoPower(1000));
             Console.ReadLine();
         }
     }
