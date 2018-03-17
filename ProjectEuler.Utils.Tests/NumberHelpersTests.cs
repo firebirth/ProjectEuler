@@ -17,5 +17,20 @@ namespace ProjectEuler.Utils.Tests
 
             actualDivisor.Should().Be(expectedDivisor);
         }
+
+        [Theory]
+        [InlineData(5, "five")]
+        [InlineData(342, "three hundred and forty two")]
+        [InlineData(115, "one hundred and fifteen")]
+        [InlineData(763, "seven hundred and sixty three")]
+        [InlineData(94, "ninety four")]
+        [InlineData(50, "fifty")]
+        [InlineData(500, "five hundred")]
+        public void GetWordRepresentation_should_return_word_representation(int i, string expectedRepresentation)
+        {
+            var actualRepresentation = NumberHelpers.GetWordRepresentation(i);
+
+            actualRepresentation.Should().BeEquivalentTo(expectedRepresentation);
+        }
     }
 }
