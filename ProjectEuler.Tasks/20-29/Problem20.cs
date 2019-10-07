@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using System.Numerics;
+﻿using System.Numerics;
 using ProjectEuler.Utils;
 
 namespace ProjectEuler.Tasks

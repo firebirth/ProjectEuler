@@ -1,5 +1,5 @@
-﻿using System;
-using ProjectEuler.Tasks;
+﻿using ProjectEuler.Tasks;
+using System;
 
 namespace ProjectEuler
 {
@@ -7,8 +7,7 @@ namespace ProjectEuler
     {
         public static void Main(string[] args)
         {
-            Console.Out.WriteLine(Problem21.SumOfAmicableUnder(10000));
-            Console.ReadLine();
+            Console.Out.WriteLine(Problem23.Calculate());
         }
     }
 }

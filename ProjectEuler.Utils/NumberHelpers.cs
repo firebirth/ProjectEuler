@@ -18,7 +18,7 @@ namespace ProjectEuler.Utils
                 return x;
             }
 
-            x = x % y;
+            x %= y;
             return Gcd(y, x);
         }
 

@@ -100,7 +100,7 @@ namespace ProjectEuler.Utils
 
         private static long GetSmallestDivisor(long number)
         {
-            var upperLimit = Math.Sqrt(number);
+            var upperLimit = (long)Math.Floor(Math.Sqrt(number));
             for (long i = 2; i <= upperLimit; i++)
             {
                 if (number % i == 0)
