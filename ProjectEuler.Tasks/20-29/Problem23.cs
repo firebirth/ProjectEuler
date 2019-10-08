@@ -16,7 +16,7 @@ namespace ProjectEuler.Tasks
                                       .Where(i => i <= UpperLimit)
                                       .Distinct();
 
-            return Enumerable.Range(1, UpperLimit-1)
+            return Enumerable.Range(1, UpperLimit - 1)
                              .Except(sums)
                              .Sum();
         }
