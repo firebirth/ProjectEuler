@@ -50,5 +50,71 @@ namespace ProjectEuler.Utils
                 }
             }
         }
+
+        public static IEnumerable<string> GenerateLexicographicPermutations(params char[] alphabet)
+        {
+            alphabet = alphabet.OrderBy(c => c).ToArray();
+            var size = alphabet.Length;
+            while (true)
+            {
+                yield return new string(alphabet);
+                int i;
+                for (i = size - 2; i >= 0; --i)
+                {
+                    if (alphabet[i] < alphabet[i + 1])
+                    {
+                        break;
+                    }
+                }
+
+                if (i == -1)
+                {
+                    break;
+                }
+                else
+                {
+                    var ceilIndex = FindCeil(alphabet, alphabet[i], i + 1, size - 1);
+                    Swap(alphabet, i, ceilIndex);
+                    Reverse(alphabet, i + 1, size - 1);
+                }
+            }
+
+            int FindCeil(char[] str, char first, int l, int h)
+            {
+                // initialize index of ceiling element  
+                var ceilIndex = l;
+                var ceilChar = str[ceilIndex];
+                // Now iterate through rest of the elements and find
+                // the smallest character greater than 'first'
+                for (var i = l + 1; i <= h; i++)
+                {
+                    var c = str[i];
+                    if (c > first && c < ceilChar)
+                    {
+                        ceilIndex = i;
+                        ceilChar = str[ceilIndex];
+                    }
+                }
+
+                return ceilIndex;
+            }
+
+            void Swap<T>(T[] arr, int x, int y)
+            {
+                var tmp = arr[x];
+                arr[x] = arr[y];
+                arr[y] = tmp;
+            }
+
+            void Reverse<T>(T[] arr, int from, int to)
+            {
+                while (from < to)
+                {
+                    Swap(arr, from, to);
+                    from++;
+                    to--;
+                }
+            }
+        }
     }
 }

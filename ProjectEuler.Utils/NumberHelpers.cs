@@ -80,8 +80,7 @@ namespace ProjectEuler.Utils
 
         public static long GetSumOfDigits(string number)
         {
-            return number.Select(s => s.ToString())
-                         .Select(long.Parse)
+            return number.Select(s => long.Parse(s.ToString()))
                          .Sum();
         }
 

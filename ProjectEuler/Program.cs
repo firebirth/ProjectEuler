@@ -8,7 +8,7 @@ namespace ProjectEuler
     {
         public static void Main(string[] args)
         {
-            ExecuteAndMeasure(() => Problem22.Calculate(@"C:\Temp\p022_names.txt"));
+            ExecuteAndMeasure(() => Problem26.Calculate());
         }
 
         private static void ExecuteAndMeasure<TResult>(Func<TResult> func)
